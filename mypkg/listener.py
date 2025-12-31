@@ -3,7 +3,7 @@ from rclpy.node import Node
 from std_msgs.msg import Int16
 
 def cb(msg):
-    node.get_logger().info("listen:%d" % msg.data)
+    print(f"listen:{msg.data}")
 
 def main():
     global node
