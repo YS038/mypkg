@@ -7,15 +7,14 @@ def main():
     node = Node("talker")
     pub = node.create_publisher(Int16, "countup", 10)
 
-    count = 0
-    while rclpy.ok():
-        msg = Int16()
-        msg.data = count
-        node.get_logger().info("Publish: %d" % count)
-        pub.publish(msg)
-        count += 1
-        rclpy.spin_once(node, timeout_sec=1.0)
-
+    count = 1
+    while rclpy.ok() and count <= 10:
+    msg = Int16()
+    msg.data = count
+    node.get_logger().info("Publish: %d" % count)
+    pub.publish(msg)
+    count += 1
+    rclpy.spin_once(node, timeout_sec=0.1)
     node.destroy_node()
     rclpy.shutdown()
 
