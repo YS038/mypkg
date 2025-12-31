@@ -8,7 +8,7 @@ def main():
     pub = node.create_publisher(Int16, "countup", 10)
 
     count = 1
-    while rclpy.ok() and count <= 10:
+    while rclpy.ok() and count <= 20:
         msg = Int16()
         msg.data = count
         node.get_logger().info("Publish: %d" % count)
