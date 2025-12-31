@@ -9,12 +9,13 @@ def main():
 
     count = 1
     while rclpy.ok() and count <= 10:
-    msg = Int16()
-    msg.data = count
-    node.get_logger().info("Publish: %d" % count)
-    pub.publish(msg)
-    count += 1
-    rclpy.spin_once(node, timeout_sec=0.1)
+        msg = Int16()
+        msg.data = count
+        node.get_logger().info("Publish: %d" % count)
+        pub.publish(msg)
+        count += 1
+        rclpy.spin_once(node, timeout_sec=0.1)
+
     node.destroy_node()
     rclpy.shutdown()
 
