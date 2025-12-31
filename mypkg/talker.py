@@ -14,7 +14,7 @@ def main():
         node.get_logger().info("Publish: %d" % count)
         pub.publish(msg)
         count += 1
-        rclpy.spin_once(node, timeout_sec=0.1)
+        rclpy.spin_once(node, timeout_sec=0.2)
 
     node.destroy_node()
     rclpy.shutdown()
