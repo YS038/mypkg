@@ -13,4 +13,10 @@ def generate_launch_description():
              executable='listener',
              output='screen'
         )
-    return launch.LaunchDescription([talker, listener])
+    saver = launch_ros.actions.Node(
+        package='mypkg',
+        executable='saver',
+        output='screen',
+        parameters=[{'topic': 'chatter', 'output': '/home/yui31/mylogs/mylog.csv'}]
+    )
+    return launch.LaunchDescription([talker, listener,saver])
