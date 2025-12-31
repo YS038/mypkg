@@ -19,4 +19,4 @@ def generate_launch_description():
             output='screen',
             parameters=[{'topic': 'countup', 'output': '/home/yui31/mylogs/mylog.csv'}]
         )
-    return launch.LaunchDescription([talker, listener, saver])
+    return launch.LaunchDescription([talker, listener])
