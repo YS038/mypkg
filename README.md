@@ -19,6 +19,10 @@ saver       :ros2 run mypkg saver
 
 
 ## 使用しているトピック
+- `countup`（std_msgs/msg/Int16）  
+  - talker ノードが数値を publish  
+  - listener ノードおよび saver ノードが subscribe
+
 
 
 
