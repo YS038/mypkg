@@ -21,7 +21,7 @@ def cb(msg):
 
 def main():
     rclpy.init()
-    node = Node("logger")
+    node = Node("saver")
     node.create_subscription(Int16, "countup", cb, 10)
     rclpy.spin(node)
     rclpy.shutdown()
