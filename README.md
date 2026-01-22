@@ -3,7 +3,6 @@
 
 # mypkg
 
-## ノードの説明  
 ## ノードの説明
 このパッケージには、数値データを送受信・記録するノードが含まれています。
 `countup` トピック（`std_msgs/msg/Int16`）を使用します。
@@ -12,19 +11,13 @@
 - listener ノード：数値データを受信して表示する
 - saver ノード：数値データを受信し，受信回数と合計値を計算して保存する
 
-  
-## ノードを起動する方法  
-talker   : ros2 run mypkg talker
-listener : ros2 run mypkg listener
-saver    : ros2 run mypkg saver  
-
 
 ## 使用しているトピック
 - `countup`（std_msgs/msg/Int16）  
   - 数値データを送受信するためのトピック
 
 ## 動作環境   
-- OS:Ubuntu 24.04.3 LTS  
+- OS:Ubuntu 22.04.3 LTS  
 - version：Python 3.12.3  
 - ROS 2: Jazzy
 
